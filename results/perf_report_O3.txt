@@ -1,0 +1,109 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 345  of event 'cycles:P'
+# Event count (approx.): 356447444
+#
+# Overhead  Symbol                                                                                                                                                                                                                                             IPC   [IPC Coverage]
+# ........  .................................................................................................................................................................................................................................................  ....................
+#
+    79.52%  [.] multiply(std::vector<float, std::allocator<float> > const&, std::vector<float, std::allocator<float> > const&, std::vector<float, std::allocator<float> >&, int) [clone .isra.0]                                                               -      -            
+            |
+            ---main
+               0x7e36a3e2a1ca
+               __libc_start_main
+               _start
+
+     2.67%  [.] fill_random(std::vector<float, std::allocator<float> >&, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&) [clone .isra.0]  -      -            
+            |
+            ---main
+               0x7e36a3e2a1ca
+               __libc_start_main
+               _start
+
+     2.29%  [k] clear_page_erms                                                                                                                                                                                                                                -      -            
+            |
+            ---__alloc_pages
+               __folio_alloc
+               vma_alloc_folio
+               do_anonymous_page
+               __handle_mm_fault
+               handle_mm_fault
+               do_user_addr_fault
+               exc_page_fault
+               asm_exc_page_fault
+               0x7e36a3f8984a
+               main
+               0x7e36a3e2a1ca
+               __libc_start_main
+               _start
+
+     1.75%  [.] 0x000000000018984a                                                                                                                                                                                                                             -      -            
+            |
+            ---main
+               0x7e36a3e2a1ca
+               __libc_start_main
+               _start
+
+     1.42%  [k] asm_exc_page_fault                                                                                                                                                                                                                             -      -            
+            |
+            ---0x7e36a3f8984a
+               main
+               0x7e36a3e2a1ca
+               __libc_start_main
+               _start
+
+     1.20%  [.] std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>::_M_gen_rand()                                                              -      -            
+            |
+            ---main
+               0x7e36a3e2a1ca
+               __libc_start_main
+               _start
+
+     0.90%  [.] checksum(std::vector<float, std::allocator<float> > const&)                                                                                                                                                                                    -      -            
+            |
+            ---0x7e36a3e2a1ca
+               __libc_start_main
+               _start
+
+     0.60%  [k] __rcu_read_unlock                                                                                                                                                                                                                              -      -            
+     0.57%  [k] up_read                                                                                                                                                                                                                                        -      -            
+            |
+            ---do_user_addr_fault
+               exc_page_fault
+               asm_exc_page_fault
+               0x7e36a3f8984a
+               main
+               0x7e36a3e2a1ca
+               __libc_start_main
+               _start
+
+     0.56%  [k] __this_cpu_preempt_check                                                                                                                                                                                                                       -      -            
+     0.56%  [k] down_read_trylock                                                                                                                                                                                                                              -      -            
+            |
+            ---lock_vma_under_rcu
+               do_user_addr_fault
+               exc_page_fault
+               asm_exc_page_fault
+               0x7e36a3f8984a
+               main
+               0x7e36a3e2a1ca
+               __libc_start_main
+               _start
+
+     0.52%  [k] exc_page_fault                                                                                                                                                                                                                                 -      -            
+            |
+            ---asm_exc_page_fault
+               0x7e36a3f8984a
+               main
+               0x7e36a3e2a1ca
+               __libc_start_main
+               _start
+
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

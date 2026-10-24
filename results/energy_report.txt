@@ -1,0 +1,12 @@
+3.1 System_J = CPU energy during the run;  3.2 Program_J = System_J - IdleW * Seconds
+
+Variant Reps Seconds IdleW  AvgW System_J Program_J J_per_mul
+------- ---- ------- -----  ---- -------- --------- ---------
+O0         3   13,64    22 34,18    466,1     166,1    55,369
+O3       200   14,67 24,44 37,38    548,3     189,7     0,949
+
+
+Energy for ONE multiplication:
+  O0: 55,369 J
+  O3: 0,949 J  (58,3x less than O0)
+

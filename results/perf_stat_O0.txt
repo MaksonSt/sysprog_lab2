@@ -1,0 +1,25 @@
+n=1024 reps=1 checksum=19966.3502 time=3.795 s speed=0.57 GFLOPS
+
+ Performance counter stats for 'build/matmul_O0 1024 1':
+
+           4436.09 msec task-clock                       #    1.090 CPUs utilized             
+                 7      context-switches                 #    1.578 /sec                      
+                 0      cpu-migrations                   #    0.000 /sec                      
+              3206      page-faults                      #  722.709 /sec                      
+       18772238262      cycles                           #    4.232 GHz                         (85.67%)
+         216903894      stalled-cycles-frontend          #    1.16% frontend cycles idle        (85.74%)
+       59089838676      instructions                     #    3.15  insn per cycle            
+                                                  #    0.00  stalled cycles per insn     (85.73%)
+        5537324879      branches                         #    1.248 G/sec                       (85.74%)
+           4085459      branch-misses                    #    0.07% of all branches             (85.74%)
+       24276102399      L1-dcache-loads                  #    5.472 G/sec                       (85.74%)
+          74552644      L1-dcache-load-misses            #    0.31% of all L1-dcache accesses   (85.64%)
+   <not supported>      LLC-loads                                                             
+   <not supported>      LLC-load-misses                                                       
+
+       4.069874040 seconds time elapsed
+
+       4.427992000 seconds user
+       0.008725000 seconds sys
+
+

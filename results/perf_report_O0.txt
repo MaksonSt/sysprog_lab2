@@ -1,0 +1,84 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 18K of event 'cycles:P'
+# Event count (approx.): 19154358295
+#
+# Overhead  Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                           IPC   [IPC Coverage]
+# ........  ...............................................................................................................................................................................................................................................................................................................................................................................................................................................................  ....................
+#
+    72.40%  [.] multiply(std::vector<float, std::allocator<float> > const&, std::vector<float, std::allocator<float> > const&, std::vector<float, std::allocator<float> >&, int)                                                                                                                                                                                                                                                                                             -      -            
+            |
+            ---main
+               0x7fe27442a1ca
+               __libc_start_main
+               _start
+
+    11.89%  [.] std::vector<float, std::allocator<float> >::operator[](unsigned long) const                                                                                                                                                                                                                                                                                                                                                                                  -      -            
+            |          
+            |--6.14%--multiply(std::vector<float, std::allocator<float> > const&, std::vector<float, std::allocator<float> > const&, std::vector<float, std::allocator<float> >&, int)
+            |          main
+            |          0x7fe27442a1ca
+            |          __libc_start_main
+            |          _start
+            |          
+             --5.75%--main
+                       0x7fe27442a1ca
+                       __libc_start_main
+                       _start
+
+     8.26%  [.] std::vector<float, std::allocator<float> >::operator[](unsigned long)                                                                                                                                                                                                                                                                                                                                                                                        -      -            
+            |          
+            |--5.72%--multiply(std::vector<float, std::allocator<float> > const&, std::vector<float, std::allocator<float> > const&, std::vector<float, std::allocator<float> >&, int)
+            |          main
+            |          0x7fe27442a1ca
+            |          __libc_start_main
+            |          _start
+            |          
+             --2.54%--main
+                       0x7fe27442a1ca
+                       __libc_start_main
+                       _start
+
+     3.13%  [.] 0x000000000001a55f                                                                                                                                                                                                                                                                                                                                                                                                                                           -      -            
+            |
+            ---float std::generate_canonical<float, 24ul, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+               std::__detail::_Adaptor<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>, float>::operator()()
+               float std::uniform_real_distribution<float>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_real_distribution<float>::param_type const&)
+               float std::uniform_real_distribution<float>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+               fill_random(std::vector<float, std::allocator<float> >&, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+               main
+               0x7fe27442a1ca
+               __libc_start_main
+               _start
+
+     0.84%  [.] float std::generate_canonical<float, 24ul, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)                                                                         -      -            
+            |          
+             --0.83%--std::__detail::_Adaptor<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>, float>::operator()()
+                       float std::uniform_real_distribution<float>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_real_distribution<float>::param_type const&)
+                       float std::uniform_real_distribution<float>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+                       fill_random(std::vector<float, std::allocator<float> >&, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+                       main
+                       0x7fe27442a1ca
+                       __libc_start_main
+                       _start
+
+     0.54%  [.] std::log(long double)                                                                                                                                                                                                                                                                                                                                                                                                                                        -      -            
+            |
+            ---float std::generate_canonical<float, 24ul, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+               std::__detail::_Adaptor<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>, float>::operator()()
+               float std::uniform_real_distribution<float>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&, std::uniform_real_distribution<float>::param_type const&)
+               float std::uniform_real_distribution<float>::operator()<std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul> >(std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+               fill_random(std::vector<float, std::allocator<float> >&, std::mersenne_twister_engine<unsigned long, 32ul, 624ul, 397ul, 31ul, 2567483615ul, 11ul, 4294967295ul, 7ul, 2636928640ul, 15ul, 4022730752ul, 18ul, 1812433253ul>&)
+               main
+               0x7fe27442a1ca
+               __libc_start_main
+               _start
+
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

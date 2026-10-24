@@ -1,0 +1,16 @@
+=== O0 ===
+instructions in multiply():  86
+calls (e.g. vector::operator[]): 4
+scalar float ops (...ss, 1 float):     9
+packed ops on xmm (...ps, 4 floats):   0
+packed ops on ymm (AVX, 8 floats):     0
+FMA instructions (vfmadd...):          0
+
+=== O3 ===
+instructions in multiply():  180
+calls (e.g. vector::operator[]): 1
+scalar float ops (...ss, 1 float):     13
+packed ops on xmm (...ps, 4 floats):   3
+packed ops on ymm (AVX, 8 floats):     4
+FMA instructions (vfmadd...):          6
+
